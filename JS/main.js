@@ -69,7 +69,11 @@ Il risultato del calcolo del prezzo finale deve essere visualizzato in “forma 
             if (arrayDiscount[i] == codPerSconto) {
             DiscountCodePresent = true;
             }
+            if (arrayDiscount[i] != codPerSconto) {
+                console.log("Inserire un codice sconto valido!")
+            }
         }
+        
         if (DiscountCodePresent) {
             prezzoWork = prezzoWork * 0.75;
             
