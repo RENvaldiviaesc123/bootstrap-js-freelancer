@@ -22,7 +22,8 @@ Il risultato del calcolo del prezzo finale deve essere visualizzato in “forma 
     let arrayDiscount = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
 
-    function calcolaPrezzo (arrayDiscount) {
+    function calcolaPrezzo (event) {
+        event.preventDefault()
     //Dichiriamo le nostre variabile che ci serviranno col form
         let hoursRequested = parseInt(document.getElementById("hours").value);
         let workOffer = parseInt(document.getElementById("type-of-work").value);
@@ -70,9 +71,10 @@ Il risultato del calcolo del prezzo finale deve essere visualizzato in “forma 
             }
         }
         if (DiscountCodePresent) {
-            prezzoWork = prezzoWork * 0.75
-            console.log("Il prezzo finale con codice sconto della sua work offer è: " + prezzoWork)
+            prezzoWork = prezzoWork * 0.75;
+            
             }
+        console.log("Il prezzo finale con codice sconto della sua work offer è: " + prezzoWork);
         /*Richiamiamo il nostro prezzo con il toFixed per far il programma prendere solo i primi due numeri 
         dopo la virgola. Inseriamo il nostro messaggio e il risultato finale del prezzo dentro il nostro html*/
         prezzoWork = prezzoWork.toFixed(2)
