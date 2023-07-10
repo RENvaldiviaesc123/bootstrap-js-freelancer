@@ -63,7 +63,7 @@ Il risultato del calcolo del prezzo finale deve essere visualizzato in “forma 
         }
         
         //Applichiamo lo sconto al prezzo precedentemente calcolato con le diverse ore 
-        let DiscountCodePresent = false
+        let DiscountCodePresent = false;
         for (let i = 0 ; i < arrayDiscount.length; i++) {
             if (codPerSconto == arrayDiscount[i]) {
             DiscountCodePresent = true;
