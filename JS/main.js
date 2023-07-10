@@ -65,7 +65,7 @@ Il risultato del calcolo del prezzo finale deve essere visualizzato in “forma 
         //Applichiamo lo sconto al prezzo precedentemente calcolato con le diverse ore 
         let DiscountCodePresent = false;
         for (let i = 0 ; i < arrayDiscount.length; i++) {
-            if (codPerSconto == arrayDiscount[i]) {
+            if (arrayDiscount[i] == codPerSconto) {
             DiscountCodePresent = true;
             }
         }
@@ -76,5 +76,5 @@ Il risultato del calcolo del prezzo finale deve essere visualizzato in “forma 
         /*Richiamiamo il nostro prezzo con il toFixed per far il programma prendere solo i primi due numeri 
         dopo la virgola. Inseriamo il nostro messaggio e il risultato finale del prezzo dentro il nostro html*/
         prezzoWork = prezzoWork.toFixed(2)
-        document.getElementById("price").innerHTML = "Il prezzo della sua work offer è: " + prezzoWork;
+        document.getElementById("price").innerHTML = "Il prezzo della sua work offer è: " + prezzoWork + "€";
     }
